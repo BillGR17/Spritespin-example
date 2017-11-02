@@ -1,50 +1,61 @@
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery-1.12.4.js"></script>
-<script src='spritespin.js' type='text/javascript' />
-</head>
-<body>
-<div id='mySpriteSpin'/>
-<script type='text/javascript'>
-$("#mySpriteSpin").spritespin({
-  // path to the source images.
-  source: [
-  "cycle01.png",
-  "cycle02.png",
-  "cycle03.png",
-  "cycle04.png",
-  "cycle05.png",
-  "cycle06.png",
-  "cycle07.png",
-  "cycle08.png",
-  "cycle09.png",
-  "cycle10.png",
-  "cycle11.png",
-  "cycle12.png",
-  "cycle13.png",
-  "cycle14.png",
-  "cycle15.png",
-  "cycle16.png",
-  "cycle17.png",
-  "cycle18.png",
-  "cycle19.png",
-  "cycle20.png",
-  "cycle21.png",
-  "cycle22.png",
-  "cycle23.png",
-  "cycle24.png",
-  "cycle25.png",
-  "cycle26.png",
-  "cycle27.png",
-  "cycle28.png",
-  "cycle29.png",
-  "cycle30.png",
-  "cycle31.png",
-  "cycle32.png",
-  "cycle33.png",
-  "cycle34.png",
-  ],
-  width   : 480,  // width in pixels of the window/frame
-  height  : 327,  // height in pixels of the window/frame
-});
-</script>
-</body>
+<!DOCTYPE html>
+<html>
+<!--^^ You forgot to add these 2 lines on top-->
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id='mySpriteSpin'></div><!-- the div never closed  adding /> doesnt realy close it!-->
+    <!-- its recommended to run jquery at the end of the body -->
+    <script src="jquery-1.12.4.js" type='text/javascript'></script> <!-- this wasnt looking on the local file -->
+    <script src='spritespin.js' type='text/javascript'></script> <!-- you need to close it like this</script> -->
+    <script type='text/javascript'>
+    //this should work just fine for this example but its better to add function ready like this $(function(){
+    //  ~~copy the code inside this~~
+    //}); and this must be on the end
+    $("#mySpriteSpin").spritespin({
+      // path to the source images.
+      source: [
+      "cycle01.png",
+      "cycle02.png",
+      "cycle03.png",
+      "cycle04.png",
+      "cycle05.png",
+      "cycle06.png",
+      "cycle07.png",
+      "cycle08.png",
+      "cycle09.png",
+      "cycle10.png",
+      "cycle11.png",
+      "cycle12.png",
+      "cycle13.png",
+      "cycle14.png",
+      "cycle15.png",
+      "cycle16.png",
+      "cycle17.png",
+      "cycle18.png",
+      "cycle19.png",
+      "cycle20.png",
+      "cycle21.png",
+      "cycle22.png",
+      "cycle23.png",
+      "cycle24.png",
+      "cycle25.png",
+      "cycle26.png",
+      "cycle27.png",
+      "cycle28.png",
+      "cycle29.png",
+      "cycle30.png",
+      "cycle31.png",
+      "cycle32.png",
+      "cycle33.png",
+      "cycle34.png",
+      ],
+      width   : 480,  // width in pixels of the window/frame
+      height  : 327,  // height in pixels of the window/frame
+    });
+    </script>
+  </body>
+</html>
+
